@@ -1,35 +1,45 @@
-<p align="center">
-    <img title="Laravel Zero" height="100" src="https://raw.githubusercontent.com/laravel-zero/docs/master/images/logo/laravel-zero-readme.png" alt="Laravel Zero Logo" />
-</p>
+# TMDB CLI Project
 
-<p align="center">
-  <a href="https://github.com/laravel-zero/framework/actions"><img src="https://github.com/laravel-zero/laravel-zero/actions/workflows/tests.yml/badge.svg" alt="Build Status" /></a>
-  <a href="https://packagist.org/packages/laravel-zero/framework"><img src="https://img.shields.io/packagist/dt/laravel-zero/framework.svg" alt="Total Downloads" /></a>
-  <a href="https://packagist.org/packages/laravel-zero/framework"><img src="https://img.shields.io/packagist/v/laravel-zero/framework.svg?label=stable" alt="Latest Stable Version" /></a>
-  <a href="https://packagist.org/packages/laravel-zero/framework"><img src="https://img.shields.io/packagist/l/laravel-zero/framework.svg" alt="License" /></a>
-</p>
+This project is a Laravel-zero cli application that integrates with The Movie Database (TMDB) API to provide movie information.
 
-Laravel Zero was created by [Nuno Maduro](https://github.com/nunomaduro) and [Owen Voke](https://github.com/owenvoke), and is a micro-framework that provides an elegant starting point for your console application. It is an **unofficial** and customized version of Laravel optimized for building command-line applications.
+## Features
 
-- Built on top of the [Laravel](https://laravel.com) components.
-- Optional installation of Laravel [Eloquent](https://laravel-zero.com/docs/database/), Laravel [Logging](https://laravel-zero.com/docs/logging/) and many others.
-- Supports interactive [menus](https://laravel-zero.com/docs/build-interactive-menus/) and [desktop notifications](https://laravel-zero.com/docs/send-desktop-notifications/) on Linux, Windows & MacOS.
-- Ships with a [Scheduler](https://laravel-zero.com/docs/task-scheduling/) and  a [Standalone Compiler](https://laravel-zero.com/docs/build-a-standalone-application/).
-- Integration with [Collision](https://github.com/nunomaduro/collision) - Beautiful error reporting
+- Search for movies
+- View movie details
+- List popular movies
+- List top-rated movies
 
-------
+## Installation
 
-## Documentation
+1. Clone the repository:
+  ```
+  git clone https://github.com/yourusername/tmdb-laravel.git
+  ```
 
-For full documentation, visit [laravel-zero.com](https://laravel-zero.com/).
+2. Navigate to the project directory:
+  ```
+  cd tmdb-laravel
+  ```
 
-## Support the development
-**Do you like this project? Support it by donating**
+3. Install dependencies:
+  ```
+  composer install
+  ```
 
-- PayPal: [Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=66BYDWAT92N6L)
-- Patreon: [Donate](https://www.patreon.com/nunomaduro)
+4. Copy the `.env.example` file to `.env`:
+  ```
+  cp .env.example .env
+  ```
 
-## License
-
-Laravel Zero is an open-source software licensed under the MIT license.
-# tmdb-cli
+5. Add your TMDB API key to the `.env` file:
+  ```
+  TMDB_READ_ACCESS_TOKEN=your_tmdb_api_key
+  ```
+6. Generate PHAR 
+  ```
+  php tmdb-cli app:build <app_name>
+  ```
+7. Run the application:
+  ```
+  ./build/<app_name>.phar <command>
+  ```
