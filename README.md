@@ -41,5 +41,5 @@ This project is a Laravel-zero cli application that integrates with The Movie Da
   ```
 7. Run the application:
   ```
-  ./build/<app_name>.phar <command>
+  ./build/<app_name> <command>
   ```
